@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fetch — Phone numbers from anywhere</title>
+<meta name="description" content="Get a real, working phone number from 40+ countries in under a minute. For WhatsApp, Telegram, Google, banking and business calls." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a href="#top" class="brand">
+      <span class="brand__mark">FH</span>
+      <span class="brand__word">Fetch</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#numbers">Numbers</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      
+      <a href="#numbers" class="btn btn--solid">Get a number</a>
+    </div>
+
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>40+ countries · live in seconds</p>
+        <h1 class="hero__title">
+          A phone number<br>
+          from <span class="hero__title--accent">anywhere</span>,<br>
+          on your line by tonight.
+        </h1>
+        <p class="hero__sub">
+          Fetch  hands you a real, working number from the US, UK, Canada, Nigeria, Germany and 40 other countries — for WhatsApp, Telegram, Google, banking or business calls. No SIM card. No travel agent required.
+        </p>
+        <div class="hero__cta">
+          <a href="#numbers" class="btn btn--solid btn--lg">Browse numbers</a>
+          <a href="#how" class="btn btn--text">See how it works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero__proof">
+          <div class="proof__item"><strong>118,400+</strong><span>numbers activated</span></div>
+          <div class="proof__divider" aria-hidden="true"></div>
+          <div class="proof__item"><strong>&lt; 60s</strong><span>average delivery</span></div>
+          <div class="proof__divider" aria-hidden="true"></div>
+          <div class="proof__item"><strong>4.8/5</strong><span>from 6,200 reviews</span></div>
+        </div>
+      </div>
+
+      <!-- Signature element: split-flap departures board of live numbers -->
+      <div class="board" role="img" aria-label="Live board showing phone numbers being issued from different countries">
+        <div class="board__head">
+          <span class="board__head-title">NOW ISSUING</span>
+          <span class="board__head-live"><span class="board__head-live-dot"></span>LIVE</span>
+        </div>
+        <div class="board__cols">
+          <span>COUNTRY</span>
+          <span>NUMBER</span>
+          <span>STATUS</span>
+        </div>
+        <div class="board__rows" id="board"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGOS / TRUST ============ -->
+  <section class="trust">
+    <div class="wrap trust__inner">
+      <p class="trust__label">Built for the apps you already use</p>
+      <ul class="trust__list">
+        <li>WhatsApp</li>
+        <li>Telegram</li>
+        <li>Google Voice</li>
+        <li>Instagram</li>
+        <li>Truecaller</li>
+        <li>X</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>How it works</p>
+        <h2>Three steps. No queue, no paperwork.</h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">Pick a country</span>
+          <h3>Choose where your number comes from</h3>
+          <p>The US, UK, Canada, Nigeria, Germany and 40+ others. Filter by app support if you need WhatsApp or Telegram specifically.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">Get your number</span>
+          <h3>It's yours the second payment clears</h3>
+          <p>No ID upload, no store visit, no waiting on a courier. Your number lands in your dashboard, ready to receive.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">Start receiving</span>
+          <h3>Texts and calls land in one place</h3>
+          <p>OTP codes, verification texts and calls all show up in your Fetch dashboard the moment they arrive.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>Why Fetch</p>
+        <h2>Numbers that behave like the real thing</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card--wide">
+          <span class="feature-card__icon">◉</span>
+          <h3>Real local numbers</h3>
+          <p>Every number is a genuine local line in its country — not a flagged VoIP block that gets your account banned. Apps see a normal number, because it is one.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">↯</span>
+          <h3>Instant delivery</h3>
+          <p>Numbers are provisioned automatically. Most orders are live in under a minute, any hour of the day.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">⟲</span>
+          <h3>Rent or renew</h3>
+          <p>Grab one for a single verification, or keep it running monthly as a real second line.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">▤</span>
+          <h3>One dashboard</h3>
+          <p>Every number you own, every message it receives, in a single clean inbox — no app-hopping.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">◫</span>
+          <h3>Pay your way</h3>
+          <p>Card, bank transfer, or wallet balance. Prices are shown upfront in your currency, always.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NUMBER CATALOG ============ -->
+  <section class="numbers" id="numbers">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>Catalog</p>
+        <h2>Popular right now</h2>
+        <p class="section-sub">A sample of what's in stock. Full catalog has 40+ countries and multiple area codes for most of them.</p>
+      </div>
+
+      <div class="number-grid">
+        <article class="number-card">
+          <div class="number-card__top">
+            <span class="number-card__flag">🇺🇸</span>
+            <span class="number-card__tag">Best seller</span>
+          </div>
+          <h3>United States</h3>
+          <p class="number-card__sample">+1 (415) 555 01██</p>
+          <p class="number-card__apps">WhatsApp · Telegram · Google</p>
+          <div class="number-card__foot">
+            <span class="number-card__price">from ₦4,500<small>/mo</small></span>
+            <a href="#" class="btn btn--outline btn--sm">Select</a>
+          </div>
+        </article>
+
+        <article class="number-card">
+          <div class="number-card__top">
+            <span class="number-card__flag">🇬🇧</span>
+          </div>
+          <h3>United Kingdom</h3>
+          <p class="number-card__sample">+44 7911 12██34</p>
+          <p class="number-card__apps">WhatsApp · Telegram · Banking</p>
+          <div class="number-card__foot">
+            <span class="number-card__price">from ₦5,200<small>/mo</small></span>
+            <a href="#" class="btn btn--outline btn--sm">Select</a>
+          </div>
+        </article>
+
+        <article class="number-card">
+          <div class="number-card__top">
+            <span class="number-card__flag">🇨🇦</span>
+          </div>
+          <h3>Canada</h3>
+          <p class="number-card__sample">+1 (647) 555 02██</p>
+          <p class="number-card__apps">WhatsApp · Google · PayPal</p>
+          <div class="number-card__foot">
+            <span class="number-card__price">from ₦4,800<small>/mo</small></span>
+            <a href="#" class="btn btn--outline btn--sm">Select</a>
+          </div>
+        </article>
+
+        <article class="number-card">
+          <div class="number-card__top">
+            <span class="number-card__flag">🇩🇪</span>
+          </div>
+          <h3>Germany</h3>
+          <p class="number-card__sample">+49 176 55██012</p>
+          <p class="number-card__apps">WhatsApp · Telegram</p>
+          <div class="number-card__foot">
+            <span class="number-card__price">from ₦6,000<small>/mo</small></span>
+            <a href="#" class="btn btn--outline btn--sm">Select</a>
+          </div>
+        </article>
+
+        <article class="number-card">
+          <div class="number-card__top">
+            <span class="number-card__flag">🇳🇬</span>
+          </div>
+          <h3>Nigeria</h3>
+          <p class="number-card__sample">+234 803 4██ 0912</p>
+          <p class="number-card__apps">WhatsApp · Truecaller · Banking</p>
+          <div class="number-card__foot">
+            <span class="number-card__price">from ₦2,000<small>/mo</small></span>
+            <a href="#" class="btn btn--outline btn--sm">Select</a>
+          </div>
+        </article>
+
+        <article class="number-card number-card--more">
+          <h3>+ 35 more countries</h3>
+          <p>France, UAE, South Africa, India, Australia and more — filter by app support in the full catalog.</p>
+          <a href="#" class="btn btn--text">View full catalog <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>Customers</p>
+        <h2>Trusted by people who move fast</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <figure class="testimonial-card">
+          <blockquote>Needed a US number for a client call the same afternoon. It was active before I finished my coffee.</blockquote>
+          <figcaption><strong>Adaeze O.</strong><span>Freelance consultant</span></figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>I run three WhatsApp Business lines for my store, each with a different country number. Farline is the only place that's kept all three stable.</blockquote>
+          <figcaption><strong>Tunde A.</strong><span>Online retailer</span></figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>Verified a UK bank app in under two minutes. Didn't expect it to feel this uneventful, in a good way.</blockquote>
+          <figcaption><strong>Priya M.</strong><span>Product manager</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="wrap wrap--narrow">
+      <div class="section-head section-head--left">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>FAQ</p>
+        <h2>Before you ask</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Do I need a physical SIM card?</summary>
+          <p>No. Every number is fully virtual and lives in your Fetch dashboard. There's nothing to insert and nothing to lose.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will it work for WhatsApp and Telegram verification?</summary>
+          <p>Yes — each listing shows exactly which apps that number is confirmed to work with, so you know before you buy.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does delivery actually take?</summary>
+          <p>Most numbers are provisioned automatically and appear in your dashboard in under a minute. A small number of premium listings take up to an hour.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I keep the same number long-term?</summary>
+          <p>Yes. Renew monthly to keep it, or let it lapse after a one-time verification — your choice, no contract.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if a number stops working?</summary>
+          <p>Support swaps it for a working one at no extra cost. That guarantee applies to every number on the platform.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="cta-final">
+    <div class="wrap cta-final__inner">
+      <h2>Your next number is one search away.</h2>
+      <p>Pick a country, pay, and receive your first message within the minute.</p>
+      <a href="#numbers" class="btn btn--solid btn--lg">Browse numbers</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark">FH</span>
+      <span class="brand__word">Fetch</span>
+      <p>Real numbers, from real places, delivered in seconds.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Product</h4>
+        <a href="#numbers">Catalog</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© 2026 Fetch. All numbers issued in accordance with local carrier regulations.</p>
+  </div>
+</footer>
+
+<script src="home.js"></script>
+</body>
+</html>
